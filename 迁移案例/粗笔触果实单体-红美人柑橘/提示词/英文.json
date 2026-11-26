@@ -1,0 +1,31 @@
+{
+  "subject": {
+    "name": "Red Beauty citrus",
+    "count": 1,
+    "parts": [
+      "whole fruit",
+      "short stem",
+      "one deep olive-green leaf"
+    ]
+  },
+  "composition": {
+    "shape": "A full, slightly irregular organic silhouette",
+    "layout": "Center the intact subject with a small transparent margin"
+  },
+  "style": {
+    "drawing": "Build the form with flat color shapes, long dry-brush strokes, layered rubbing marks, and a few scraped areas",
+    "palette": "Red-orange base with closely related yellow-orange and ochre-orange layers, and a muted olive-green leaf",
+    "density": "Concentrate the texture in the peel and simplify the leaf and stem"
+  },
+  "format": {
+    "file": "PNG",
+    "background": "transparent alpha",
+    "exclude": [
+      "text",
+      "wordmarks",
+      "paper background",
+      "shadows",
+      "extra fruit"
+    ]
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "schema_version": "1.0",
+  "style_id": "dry-brush-fruit",
+  "name": "粗笔触果实单体",
+  "version": "v1.0",
+  "scope": "仅记录这组六张海报的植物图形语言及红美人柑橘透明单体验证。字体风格提取未成功。本案例不做字体风格总结，未将字体规则写入风格档案或提示词。",
+  "status": "provisional",
+  "references": [
+    {
+      "id": "pumpkin-poster-series",
+      "role": "基准图",
+      "path": "风格库/风格档案/粗笔触果实单体/参考图/基准图/六张南瓜海报.jpg",
+      "source": "用户提供的六张南瓜主题海报合照，原作者及对外出处尚未确认"
+    }
+  ],
+  "modules": {
+    "A1": "active",
+    "B1": "active",
+    "B2": "active",
+    "B3": "active",
+    "B4": "pending",
+    "C1": "active",
+    "C2": "active",
+    "C3": "active",
+    "C4": "active",
+    "D1": "active",
+    "E1": "active",
+    "E2": "active",
+    "E3": "pending"
+  },
+  "rules": [
+    {
+      "id": "R01",
+      "module": "B3",
+      "change": "core",
+      "priority": "must",
+      "statement": "用一块连续、轻微不规则的饱满轮廓承载主体，轮廓与外围空间分离清楚。",
+      "condition": "将同一组参考的植物插画语言用于果实单体。",
+      "evidence": [
+        {
+          "reference_id": "pumpkin-poster-series",
+          "observation": "右上和左下常用饱满大轮廓承载整颗果实。"
+        }
+      ],
+      "variation": "横纵布局可随包装调整，形体随水果品种变化。",
+      "check": "缩小后仍能读出一颗果实的完整外形。"
+    },
+    {
+      "id": "R02",
+      "module": "C1",
+      "change": "core",
+      "priority": "must",
+      "statement": "果实内部保留方向可读的宽笔刷拖痕和叠色，夹杂少量擦痕。",
+      "condition": "将同一组参考的植物插画语言用于果实单体。",
+      "evidence": [
+        {
+          "reference_id": "pumpkin-poster-series",
+          "observation": "左下橙色大形内部有贯穿形体的长向刷痕。"
+        }
+      ],
+      "variation": "笔触方向随果形与构图变化，允许斜擦或顺弧线铺展。",
+      "check": "观察到清楚的长笔迹，果面没有被均匀抹平。"
+    },
+    {
+      "id": "R03",
+      "module": "B1",
+      "change": "core",
+      "priority": "must",
+      "statement": "以同一果皮色系建立大面，叠加近色亮层和少量深色痕迹，叶片用压低饱和度的绿色。",
+      "condition": "将同一组参考的植物插画语言用于果实单体。",
+      "evidence": [
+        {
+          "reference_id": "pumpkin-poster-series",
+          "observation": "左下见橙、赭、黄色叠涂，中下见深浅绿与浅色剖面。"
+        }
+      ],
+      "variation": "主色随品种替换，绿橙并置是本案例选择。",
+      "check": "缩小时能先读出统一色面，放大能看出不均匀的色层。"
+    },
+    {
+      "id": "R04",
+      "module": "C2",
+      "change": "core",
+      "priority": "should",
+      "statement": "外轮廓主要由色块与周围空间的交界建立，局部边沿留少量粗刷感。",
+      "condition": "将同一组参考的植物插画语言用于果实单体。",
+      "evidence": [
+        {
+          "reference_id": "pumpkin-poster-series",
+          "observation": "多张果形的外沿轻微起伏，主要靠色块界线辨识。"
+        }
+      ],
+      "variation": "边缘的毛糙程度可随输出尺寸调整。",
+      "check": "主体有清晰剪影，边缘仍呈手绘痕迹。"
+    },
+    {
+      "id": "R05",
+      "module": "E1",
+      "change": "core",
+      "priority": "should",
+      "statement": "纹理主要集中在主体内部，果梗和叶片概括成少数较暗色块，外围清爽。",
+      "condition": "将同一组参考的植物插画语言用于果实单体。",
+      "evidence": [
+        {
+          "reference_id": "pumpkin-poster-series",
+          "observation": "参考中粗纹理集中在植物形体内部，主体外留白明显。"
+        }
+      ],
+      "variation": "交付单体时外围透明，做海报时可以是干净纸色。",
+      "check": "主体局部有细节，外围无纸底、字或杂物。"
+    },
+    {
+      "id": "R06",
+      "module": "B2",
+      "change": "conditional",
+      "priority": "should",
+      "statement": "用叠涂的深浅表现有限体积，画面以平面色块组织。",
+      "condition": "将同一组参考的植物插画语言用于果实单体。",
+      "evidence": [
+        {
+          "reference_id": "pumpkin-poster-series",
+          "observation": "中下的体积主要来自深绿外皮与浅色剖面的分区。"
+        }
+      ],
+      "variation": "剖面与果皮之间可提高明度差，单体预览可以省略投影。",
+      "check": "成图能读出形体，表面无摄影式反光和独立投影。"
+    },
+    {
+      "id": "R07",
+      "module": "D1",
+      "change": "replaceable",
+      "priority": "may",
+      "statement": "主题可选整果、剖面或切片，并按品种保留有辨识度的形状。",
+      "condition": "将同一组参考的植物插画语言用于果实单体。",
+      "evidence": [
+        {
+          "reference_id": "pumpkin-poster-series",
+          "observation": "右上整果、中下剖面和右下切片用相近的表现方法。"
+        }
+      ],
+      "variation": "果种、果色、果梗、叶片和切法均随任务安排。",
+      "check": "指定的主体数量和种类清楚。"
+    }
+  ],
+  "change_guide": {
+    "direct": [
+      "水果品种、果皮主色、果梗和叶片的具体造型",
+      "整果、剖面或切片"
+    ],
+    "preserve_role": [
+      "果形改变时保持可辨的大轮廓",
+      "色系改变时保留同类色叠擦和长笔迹",
+      "纸底换成透明时保留主体内部的颜料质感"
+    ],
+    "locked": [
+      "不规则大轮廓、内部可见干刷叠色、细节集中在果实",
+      "本次交付为一颗红美人柑橘，保留果梗与绿叶，背景透明"
+    ],
+    "pending": [
+      "超出植物题材的迁移",
+      "颜料实际媒介和制作方式"
+    ]
+  }
+}

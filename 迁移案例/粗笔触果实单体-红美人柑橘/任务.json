@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "task_id": "red-beauty-citrus",
+  "mode": "apply",
+  "style_ref": {
+    "style_id": "dry-brush-fruit",
+    "version": "v1.0",
+    "path": "风格库/风格档案/粗笔触果实单体/版本/第一版.json"
+  },
+  "brief": {
+    "theme": "一颗红美人柑橘透明单体",
+    "intent": "沿用六张海报的有机轮廓和粗笔触叠涂来画独立果实素材。",
+    "count": 1,
+    "aspect_ratio": "1270:1239",
+    "required_text": [],
+    "exclude": [
+      "文字",
+      "字标",
+      "纸底",
+      "阴影",
+      "额外水果"
+    ]
+  },
+  "locked": [
+    "仅一颗柑橘",
+    "保留果梗与一片叶",
+    "透明 PNG"
+  ],
+  "adaptation": [
+    {
+      "rule_id": "R01",
+      "binding": "以饱满橙红剪影承担主形"
+    },
+    {
+      "rule_id": "R02",
+      "binding": "在果皮内保留长向干刷叠擦"
+    },
+    {
+      "rule_id": "R03",
+      "binding": "橙红、橘黄、赭橙相邻色叠涂"
+    },
+    {
+      "rule_id": "R05",
+      "binding": "周边改成透明，纹理保留在果皮内部"
+    }
+  ],
+  "deliverables": {
+    "json_zh": "提示词/中文.json",
+    "json_en": "提示词/英文.json",
+    "simple_zh": "提示词/中文简易.md",
+    "natural": "提示词/完整自然语言.md"
+  },
+  "execution": {
+    "backend": "ImageGen（先生成包装插画，再从包装稿提取单体）",
+    "model_version": null,
+    "seed": null,
+    "reference_inputs": [
+      "风格库/风格档案/粗笔触果实单体/参考图/基准图/六张南瓜海报.jpg"
+    ],
+    "submitted_prompt": "任务记录.md",
+    "output": "成图/红美人柑橘单体.png"
+  },
+  "review": {
+    "status": "reviewed",
+    "outcome": "pass",
+    "checks": [
+      {
+        "name": "单体内容",
+        "result": "pass",
+        "evidence": "画面仅有一颗橙红柑橘，短果梗与深橄榄绿叶一并保留。"
+      },
+      {
+        "name": "插画风格",
+        "result": "pass",
+        "evidence": "果形保持饱满的大轮廓，近色长向笔触与叠擦纹理集中在果皮。"
+      },
+      {
+        "name": "透明交付",
+        "result": "pass",
+        "evidence": "出图为 1270 × 1239 PNG，RGBA 通道，四角 alpha 均为 0。"
+      }
+    ]
+  }
+}
