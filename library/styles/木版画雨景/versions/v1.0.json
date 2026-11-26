@@ -1,0 +1,259 @@
+{
+  "schema_version": "1.0",
+  "style_id": "woodblock-rain",
+  "name": "木版画雨景",
+  "version": "v1.0",
+  "scope": "以歌川广重《大桥安宅骤雨》为作品级基准的环境雨景。范围包括木版画式的斜向路径、开阔冷色环境与雨线组织，有一次参考图辅助的主题迁移。",
+  "status": "provisional",
+  "references": [
+    {
+      "id": "met-jp2522",
+      "role": "基准图",
+      "path": "library/styles/木版画雨景/references/基准图/hiroshige-shower.jpg",
+      "source": "https://www.metmuseum.org/art/collection/search/55433"
+    }
+  ],
+  "modules": {
+    "A1": "active",
+    "B1": "active",
+    "B2": "active",
+    "B3": "active",
+    "B4": "active",
+    "C1": "active",
+    "C2": "active",
+    "C3": "active",
+    "C4": "active",
+    "D1": "active",
+    "E1": "active",
+    "E2": "active",
+    "E3": "active"
+  },
+  "rules": [
+    {
+      "id": "R01",
+      "module": "A1",
+      "change": "core",
+      "priority": "must",
+      "statement": "环境先于人物建立叙事尺度，骤雨覆盖主要空间。",
+      "condition": "环境叙事雨景。",
+      "evidence": [
+        {
+          "reference_id": "met-jp2522",
+          "observation": "天空和水面占主要画幅，行人沿桥面成小尺度群组。"
+        }
+      ],
+      "variation": "主题、时代和环境类型可变。",
+      "check": "缩略图能同时辨认开阔环境与小尺度行动。"
+    },
+    {
+      "id": "R02",
+      "module": "B1",
+      "change": "core",
+      "priority": "must",
+      "statement": "低饱和冷青灰占主要面积，浅赭和暖色集中于近景路线和少数焦点。",
+      "condition": "参考范围内的雨景。",
+      "evidence": [
+        {
+          "reference_id": "met-jp2522",
+          "observation": "远岸、水面和天空偏冷，木桥和伞面有较暖浅赭色。"
+        }
+      ],
+      "variation": "可由车窗、衣物或道具承担暖色，具体色值按主题调整。",
+      "check": "检查冷色面积与暖色分布，空间仍以冷色为主。"
+    },
+    {
+      "id": "R03",
+      "module": "B2",
+      "change": "conditional",
+      "priority": "should",
+      "statement": "顶部较暗并逐渐过渡至较亮的灰青。局部亮点从环境中显现。",
+      "condition": "顶部有足够天空空间的开放式画面。",
+      "evidence": [
+        {
+          "reference_id": "met-jp2522",
+          "observation": "原图天空上缘较暗，向下渐亮。"
+        }
+      ],
+      "variation": "天空不足时可在背景另设柔和明暗过渡。",
+      "check": "检查过渡连续性，避免强烈镜头光效。"
+    },
+    {
+      "id": "R04",
+      "module": "B3",
+      "change": "core",
+      "priority": "must",
+      "statement": "斜向路径切入开阔空间并组织主体，外围保持较连续的低密度区域。",
+      "condition": "以环境为主的远景。",
+      "evidence": [
+        {
+          "reference_id": "met-jp2522",
+          "observation": "桥面从左下斜入，连接多个人物，水面大块连续。"
+        }
+      ],
+      "variation": "桥可替换为沿岸街道、山路或斜坡，方向可变。",
+      "check": "在缩略图中能找到路径方向、人物和主体。"
+    },
+    {
+      "id": "R05",
+      "module": "B4",
+      "change": "core",
+      "priority": "must",
+      "statement": "环境尺度压过人物与道具，主体依然可辨。",
+      "condition": "远景。",
+      "evidence": [
+        {
+          "reference_id": "met-jp2522",
+          "observation": "人物相对桥面、河面和雨幕都很小。"
+        }
+      ],
+      "variation": "可按画幅调整主体占比，近景按用途另定。",
+      "check": "发布尺寸下环境占主导，主体仍清楚。"
+    },
+    {
+      "id": "R06",
+      "module": "C1",
+      "change": "core",
+      "priority": "must",
+      "statement": "用细墨轮廓和平涂套色塑形，细长斜雨线跨越多个空间层。",
+      "condition": "版画雨景。",
+      "evidence": [
+        {
+          "reference_id": "met-jp2522",
+          "observation": "桥、伞、人物有细墨轮廓，雨线穿过天、水、近景。"
+        }
+      ],
+      "variation": "雨线密度和次级角度可调。",
+      "check": "检查是否呈现平面套色与贯穿式雨线。"
+    },
+    {
+      "id": "R07",
+      "module": "C2",
+      "change": "conditional",
+      "priority": "should",
+      "statement": "近景关键轮廓更明确，远岸压成简洁剪影。",
+      "condition": "有远岸或类似远层时。",
+      "evidence": [
+        {
+          "reference_id": "met-jp2522",
+          "observation": "桥梁边缘明确，远岸以低矮树影概括。"
+        }
+      ],
+      "variation": "无水域时由山脊、街廓或雾中树线接替。",
+      "check": "远层轮廓的清晰度和对比度低于前景。"
+    },
+    {
+      "id": "R08",
+      "module": "C3",
+      "change": "conditional",
+      "priority": "should",
+      "statement": "主要行动区充分描绘，背景以省略和概括为主。",
+      "condition": "参考范围内的环境远景。",
+      "evidence": [
+        {
+          "reference_id": "met-jp2522",
+          "observation": "桥上活动可辨，水和天保留大量整块区域。"
+        }
+      ],
+      "variation": "按新主体的辨识需求调整局部完成度。",
+      "check": "可辨细节集中在行动区，远层保持简洁。"
+    },
+    {
+      "id": "R09",
+      "module": "C4",
+      "change": "conditional",
+      "priority": "should",
+      "statement": "纸面略带印刷颗粒，保留平涂色块的整体性。",
+      "condition": "模拟彩色木版画媒介时。",
+      "evidence": [
+        {
+          "reference_id": "met-jp2522",
+          "observation": "原作纸纹可见，水面和桥面仍保持色块感。"
+        }
+      ],
+      "variation": "纸色与颗粒略可调整。",
+      "check": "颗粒保持克制，一眼能读出平涂层次。"
+    },
+    {
+      "id": "R10",
+      "module": "D1",
+      "change": "replaceable",
+      "priority": "may",
+      "statement": "人物、交通工具、地点及时代随任务设计。",
+      "condition": "用户更换题材时。",
+      "evidence": [
+        {
+          "reference_id": "met-jp2522",
+          "observation": "行人与舟是原图的内容实例。"
+        }
+      ],
+      "variation": "重新设计身份、数量、器物与动作。",
+      "check": "内容符合任务，人物与道路、器物关系可辨。"
+    },
+    {
+      "id": "R11",
+      "module": "E1",
+      "change": "core",
+      "priority": "must",
+      "statement": "前景活动区承担高信息密度，天空、水面及远岸保持相对疏简。",
+      "condition": "开阔环境远景。",
+      "evidence": [
+        {
+          "reference_id": "met-jp2522",
+          "observation": "桥和人物附近细节集中，远岸和大片水面信息少。"
+        }
+      ],
+      "variation": "可用低细节山谷、雪原或雾区替换水面。",
+      "check": "对比前后景，复杂度有明显层次。"
+    },
+    {
+      "id": "R12",
+      "module": "E2",
+      "change": "conditional",
+      "priority": "should",
+      "statement": "沿斜向结构能抵达一个清楚的主要行动区。",
+      "condition": "远景存在明显斜向路径。",
+      "evidence": [
+        {
+          "reference_id": "met-jp2522",
+          "observation": "桥面的形状和扶栏把视线带向沿桥行动的人群。"
+        }
+      ],
+      "variation": "新主题可以将行动区收束到一辆车或一处灯光。",
+      "check": "缩略图中路径与焦点有连贯关系。"
+    },
+    {
+      "id": "R13",
+      "module": "E3",
+      "change": "pending",
+      "priority": "may",
+      "statement": "双组雨线的角度差可能加强雨势。",
+      "condition": "需要贴近该作品中的骤雨表现时。",
+      "evidence": [
+        {
+          "reference_id": "met-jp2522",
+          "observation": "藏品说明和图中可见略有角度差的雨线。"
+        }
+      ],
+      "variation": "可通过同题材单角度与双角度雨线图比较。",
+      "check": "比较后确认是否明显影响辨识度。"
+    }
+  ],
+  "change_guide": {
+    "direct": [
+      "主题、地点、时代、人物数量、道具或载具"
+    ],
+    "preserve_role": [
+      "港湾可换成开阔山谷，保留低密度空间",
+      "桥可换成沿岸道路，保留斜向引导",
+      "暖色可移至车窗或照明道具，保留焦点分工"
+    ],
+    "locked": [
+      "风格目标为本档案的雨景时，保留贯穿雨线、斜向路径、环境尺度、冷暖分工和平涂轮廓"
+    ],
+    "pending": [
+      "晴天变体的适用范围",
+      "两组雨线角度的辨识权重",
+      "极宽横幅的迁移效果"
+    ]
+  }
+}

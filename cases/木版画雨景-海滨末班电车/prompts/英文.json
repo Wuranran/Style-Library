@@ -1,0 +1,30 @@
+{
+  "subject": {
+    "theme": "The last seaside tram in a rainstorm",
+    "tram": "One small, single-car modern tram traveling away on rails embedded in a stone-paved street",
+    "pedestrians": "Three umbrella-carrying pedestrians spaced along the inland side of the street"
+  },
+  "composition": {
+    "route": "A stone-paved harbor street on solid ground narrows diagonally from the lower right toward the middle left",
+    "space": "A broad, uninterrupted harbor lies below the stone seawall, with a low blue-gray silhouette on the far shore",
+    "focus": "The tram's amber-lit windows"
+  },
+  "style": {
+    "medium": "Color woodblock print, fine ink outlines, flat color shapes, subtle print grain and warm ivory paper",
+    "rain": "Two sets of long, fine rain lines cross the sky, water and foreground. The second set is sparser and slightly differently angled",
+    "palette": "Charcoal indigo fading to blue-gray in the sky, muted teal harbor water, pale gray ochre on the near shore, and amber concentrated in the tram windows",
+    "detail": "Define the tram, umbrellas, tracks and seawall. Simplify the distant shore"
+  },
+  "format": {
+    "aspect_ratio": "2:3",
+    "orientation": "portrait",
+    "exclude": [
+      "bridges",
+      "title cartouches",
+      "text",
+      "logos",
+      "watermarks",
+      "photographic lens effects"
+    ]
+  }
+}

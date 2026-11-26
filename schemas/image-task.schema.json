@@ -1,0 +1,330 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "图像任务与验收",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mode": {
+      "enum": [
+        "apply",
+        "revise",
+        "audit"
+      ]
+    },
+    "style_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "style_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^v[0-9]+\\.[0-9]+(?:\\.[0-9]+)?$"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "style_id",
+        "version",
+        "path"
+      ]
+    },
+    "brief": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "theme": {
+          "type": "string",
+          "minLength": 1
+        },
+        "intent": {
+          "type": "string",
+          "minLength": 1
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "aspect_ratio": {
+          "type": "string",
+          "minLength": 1
+        },
+        "required_text": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "exclude": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "theme",
+        "intent",
+        "count",
+        "aspect_ratio",
+        "required_text",
+        "exclude"
+      ]
+    },
+    "locked": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "adaptation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "rule_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "binding": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "rule_id",
+          "binding"
+        ]
+      },
+      "minItems": 1
+    },
+    "deliverables": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "json_zh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "json_en": {
+          "type": "string",
+          "minLength": 1
+        },
+        "simple_zh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "natural": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "json_zh",
+        "json_en",
+        "simple_zh",
+        "natural"
+      ]
+    },
+    "execution": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "backend": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "model_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "seed": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "reference_inputs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "submitted_prompt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "output": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "backend",
+        "model_version",
+        "seed",
+        "reference_inputs",
+        "submitted_prompt",
+        "output"
+      ]
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "not_generated",
+            "unreviewed",
+            "reviewed"
+          ]
+        },
+        "outcome": {
+          "enum": [
+            "pass",
+            "needs_revision",
+            "indeterminate",
+            "not_applicable"
+          ]
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "result": {
+                "enum": [
+                  "pass",
+                  "fail",
+                  "unknown",
+                  "not_applicable"
+                ]
+              },
+              "evidence": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "name",
+              "result",
+              "evidence"
+            ]
+          }
+        }
+      },
+      "required": [
+        "status",
+        "outcome",
+        "checks"
+      ]
+    },
+    "storyboard": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "frame_number": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "narrative_function": {
+            "type": "string",
+            "minLength": 1
+          },
+          "relation_to_previous": {
+            "type": "string",
+            "minLength": 1
+          },
+          "composition": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "shot_type": {
+                "type": "string",
+                "minLength": 1
+              },
+              "angle": {
+                "type": "string",
+                "minLength": 1
+              },
+              "focal_element": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "shot_type",
+              "angle",
+              "focal_element"
+            ]
+          },
+          "tension": {
+            "type": "string",
+            "minLength": 1
+          },
+          "anchor_point": {
+            "type": "string",
+            "minLength": 1
+          },
+          "transition_to_next": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "frame_number",
+          "narrative_function",
+          "relation_to_previous",
+          "composition",
+          "tension",
+          "anchor_point",
+          "transition_to_next"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "task_id",
+    "mode",
+    "style_ref",
+    "brief",
+    "locked",
+    "adaptation",
+    "deliverables",
+    "execution",
+    "review"
+  ]
+}

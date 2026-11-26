@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "task_id": "seaside-last-tram",
+  "mode": "apply",
+  "style_ref": {
+    "style_id": "woodblock-rain",
+    "version": "v1.0",
+    "path": "library/styles/木版画雨景/versions/v1.0.json"
+  },
+  "brief": {
+    "theme": "雨中的海滨末班电车",
+    "intent": "让骤雨和开阔海面压住小尺度行动，沿斜路找到电车。",
+    "count": 1,
+    "aspect_ratio": "2:3",
+    "required_text": [],
+    "exclude": [
+      "桥梁",
+      "题签",
+      "文字",
+      "标志",
+      "水印",
+      "摄影式镜头光效"
+    ]
+  },
+  "locked": [
+    "单张竖版 2:3",
+    "一辆单节电车",
+    "三位撑伞行人",
+    "无画中文字"
+  ],
+  "adaptation": [
+    {
+      "rule_id": "R04",
+      "binding": "用从右下斜向左中的海岸街道与轨道接替桥面"
+    },
+    {
+      "rule_id": "R05",
+      "binding": "开阔港湾和天空占主导，以小电车与行人交代尺度"
+    },
+    {
+      "rule_id": "R02",
+      "binding": "冷青水域和灰青天空承担主色，琥珀色窗光承担局部焦点"
+    },
+    {
+      "rule_id": "R06",
+      "binding": "近景用细墨轮廓与套色，雨线贯穿各空间层"
+    }
+  ],
+  "deliverables": {
+    "json_zh": "prompts/中文.json",
+    "json_en": "prompts/英文.json",
+    "simple_zh": "prompts/中文简易.md",
+    "natural": "prompts/完整自然语言.md"
+  },
+  "execution": {
+    "backend": "ImageGen（对话中的图像生成工具）",
+    "model_version": null,
+    "seed": null,
+    "reference_inputs": [
+      "library/styles/木版画雨景/references/基准图/hiroshige-shower.jpg"
+    ],
+    "submitted_prompt": "prompts/完整自然语言.md",
+    "output": "results/seaside-tram.jpg"
+  },
+  "review": {
+    "status": "reviewed",
+    "outcome": "needs_revision",
+    "checks": [
+      {
+        "name": "空间与尺度",
+        "result": "pass",
+        "evidence": "斜向石岸街路切入开阔港湾，一辆小尺寸电车可辨，远岸为低矮剪影。"
+      },
+      {
+        "name": "主体与规格",
+        "result": "pass",
+        "evidence": "可见一辆电车和三位持伞行人。生成图为 1024 × 1536。"
+      },
+      {
+        "name": "雨线",
+        "result": "pass",
+        "evidence": "细雨线跨越天空、水面与近景。两组雨线的角度差在预览中不够显著。"
+      },
+      {
+        "name": "暖色控制",
+        "result": "fail",
+        "evidence": "窗光形成焦点，路面与伞面有较强暖色，超出窗光局部。"
+      },
+      {
+        "name": "纸面与平涂",
+        "result": "fail",
+        "evidence": "下半部的铺地、石墙与雨纹比基准图更密，纸面颗粒较重。"
+      },
+      {
+        "name": "系列一致性",
+        "result": "not_applicable",
+        "evidence": "本案例是一张图。"
+      }
+    ]
+  }
+}

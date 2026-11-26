@@ -1,0 +1,341 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "风格档案",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "style_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^v[0-9]+\\.[0-9]+(?:\\.[0-9]+)?$"
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "provisional",
+        "validated"
+      ]
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "role": {
+            "enum": [
+              "基准图",
+              "相似图",
+              "对照图"
+            ]
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "role",
+          "path",
+          "source"
+        ]
+      },
+      "minItems": 1
+    },
+    "modules": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "A1": {
+          "enum": [
+            "active",
+            "inactive",
+            "not_applicable",
+            "pending"
+          ]
+        },
+        "B1": {
+          "enum": [
+            "active",
+            "inactive",
+            "not_applicable",
+            "pending"
+          ]
+        },
+        "B2": {
+          "enum": [
+            "active",
+            "inactive",
+            "not_applicable",
+            "pending"
+          ]
+        },
+        "B3": {
+          "enum": [
+            "active",
+            "inactive",
+            "not_applicable",
+            "pending"
+          ]
+        },
+        "B4": {
+          "enum": [
+            "active",
+            "inactive",
+            "not_applicable",
+            "pending"
+          ]
+        },
+        "C1": {
+          "enum": [
+            "active",
+            "inactive",
+            "not_applicable",
+            "pending"
+          ]
+        },
+        "C2": {
+          "enum": [
+            "active",
+            "inactive",
+            "not_applicable",
+            "pending"
+          ]
+        },
+        "C3": {
+          "enum": [
+            "active",
+            "inactive",
+            "not_applicable",
+            "pending"
+          ]
+        },
+        "C4": {
+          "enum": [
+            "active",
+            "inactive",
+            "not_applicable",
+            "pending"
+          ]
+        },
+        "D1": {
+          "enum": [
+            "active",
+            "inactive",
+            "not_applicable",
+            "pending"
+          ]
+        },
+        "E1": {
+          "enum": [
+            "active",
+            "inactive",
+            "not_applicable",
+            "pending"
+          ]
+        },
+        "E2": {
+          "enum": [
+            "active",
+            "inactive",
+            "not_applicable",
+            "pending"
+          ]
+        },
+        "E3": {
+          "enum": [
+            "active",
+            "inactive",
+            "not_applicable",
+            "pending"
+          ]
+        }
+      },
+      "required": [
+        "A1",
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "D1",
+        "E1",
+        "E2",
+        "E3"
+      ]
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "module": {
+            "enum": [
+              "A1",
+              "B1",
+              "B2",
+              "B3",
+              "B4",
+              "C1",
+              "C2",
+              "C3",
+              "C4",
+              "D1",
+              "E1",
+              "E2",
+              "E3"
+            ]
+          },
+          "change": {
+            "enum": [
+              "core",
+              "conditional",
+              "replaceable",
+              "pending"
+            ]
+          },
+          "priority": {
+            "enum": [
+              "must",
+              "should",
+              "may"
+            ]
+          },
+          "statement": {
+            "type": "string",
+            "minLength": 1
+          },
+          "condition": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "reference_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "observation": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "reference_id",
+                "observation"
+              ]
+            },
+            "minItems": 1
+          },
+          "variation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "check": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "module",
+          "change",
+          "priority",
+          "statement",
+          "condition",
+          "evidence",
+          "variation",
+          "check"
+        ]
+      },
+      "minItems": 1
+    },
+    "change_guide": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "direct": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "preserve_role": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "locked": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "pending": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "direct",
+        "preserve_role",
+        "locked",
+        "pending"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "style_id",
+    "name",
+    "version",
+    "scope",
+    "status",
+    "references",
+    "modules",
+    "rules",
+    "change_guide"
+  ]
+}

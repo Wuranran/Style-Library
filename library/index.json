@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "path_base": "repository_root",
+  "styles": [
+    {
+      "style_id": "woodblock-rain",
+      "name": "木版画雨景",
+      "aliases": [
+        "骤雨木版画",
+        "雨景木版画"
+      ],
+      "default_version": "v1.0",
+      "versions": {
+        "v1.0": "library/styles/木版画雨景/versions/v1.0.json"
+      },
+      "directory": "library/styles/木版画雨景",
+      "case_paths": [
+        "cases/木版画雨景-海滨末班电车/任务记录.md"
+      ]
+    }
+  ]
+}
