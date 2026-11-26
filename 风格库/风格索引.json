@@ -11,11 +11,11 @@
       ],
       "default_version": "v1.0",
       "versions": {
-        "v1.0": "library/styles/木版画雨景/versions/v1.0.json"
+        "v1.0": "风格库/风格档案/木版画雨景/版本/第一版.json"
       },
-      "directory": "library/styles/木版画雨景",
+      "directory": "风格库/风格档案/木版画雨景",
       "case_paths": [
-        "cases/木版画雨景-海滨末班电车/任务记录.md"
+        "迁移案例/木版画雨景-海滨末班电车/任务记录.md"
       ]
     }
   ]

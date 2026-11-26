@@ -5,7 +5,7 @@
   "style_ref": {
     "style_id": "woodblock-rain",
     "version": "v1.0",
-    "path": "library/styles/木版画雨景/versions/v1.0.json"
+    "path": "风格库/风格档案/木版画雨景/版本/第一版.json"
   },
   "brief": {
     "theme": "雨中的海滨末班电车",
@@ -47,20 +47,20 @@
     }
   ],
   "deliverables": {
-    "json_zh": "prompts/中文.json",
-    "json_en": "prompts/英文.json",
-    "simple_zh": "prompts/中文简易.md",
-    "natural": "prompts/完整自然语言.md"
+    "json_zh": "提示词/中文.json",
+    "json_en": "提示词/英文.json",
+    "simple_zh": "提示词/中文简易.md",
+    "natural": "提示词/完整自然语言.md"
   },
   "execution": {
     "backend": "ImageGen（对话中的图像生成工具）",
     "model_version": null,
     "seed": null,
     "reference_inputs": [
-      "library/styles/木版画雨景/references/基准图/hiroshige-shower.jpg"
+      "风格库/风格档案/木版画雨景/参考图/基准图/大桥安宅骤雨.jpg"
     ],
-    "submitted_prompt": "prompts/完整自然语言.md",
-    "output": "results/seaside-tram.jpg"
+    "submitted_prompt": "提示词/完整自然语言.md",
+    "output": "成图/雨中的海滨末班电车.jpg"
   },
   "review": {
     "status": "reviewed",
